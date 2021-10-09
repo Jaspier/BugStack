@@ -48,6 +48,11 @@ const App = () => {
     showAlert('Bug Log added to Stack');
   }
 
+  function deleteItem(_id) {
+    setLogs(logs.filter(item => item._id !== _id));
+    showAlert('Bug Log removed from Stack');
+  }
+
   function showAlert(message, variant = 'success', seconds = 3000) {
     setAlert({
       show: true,
@@ -80,7 +85,7 @@ const App = () => {
         </thead>
         <tbody>
           {logs.map(log => (
-            <LogItem key={log._id} log={log} />
+            <LogItem key={log._id} log={log} deleteItem={deleteItem} />
           ))}
         </tbody>
       </Table>
