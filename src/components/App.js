@@ -70,7 +70,7 @@ const App = () => {
       {alert.show && <Alert variant={alert.variant}>{alert.message}</Alert>}
       <Table>
         <thead>
-          <tr>
+          <tr className='header'>
             <th>Priority</th>
             <th>Bug</th>
             <th>User</th>

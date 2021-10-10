@@ -20,7 +20,7 @@ const AddLogItem = ({ addItem }) => {
   };
 
   return (
-    <Card className='mt-5 mb-3'>
+    <Card className='mt-5 mb-3 addLog'>
       <Card.Body>
         <Form onSubmit={onSubmit}>
           <Row className='my-3'>

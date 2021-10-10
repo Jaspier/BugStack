@@ -14,7 +14,7 @@ const LogItem = ({
   };
 
   return (
-    <tr>
+    <tr className='logItem'>
       <td>
         <Badge variant={setVariant()} className='p-2'>
           {priority.charAt(0).toUpperCase() + priority.slice(1)}
