@@ -72,10 +72,10 @@ function createMainWindow() {
 }
 
 app.on('ready', () => {
-  createMainWindow()
+  createMainWindow();
 
-  const mainMenu = Menu.buildFromTemplate(menu)
-  Menu.setApplicationMenu(mainMenu)
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
 });
 
 const menu = [
@@ -92,6 +92,10 @@ const menu = [
       {
         label: 'Clear Logs',
         click: () => clearLogs(),
+      },
+      {
+        label: 'Refresh',
+        click: () => sendLogs(),
       },
     ],
   },
