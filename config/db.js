@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
+const config = require('./production.json');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(
-      'mongodb+srv://allenj1234:allenj1234@bugstack.b66ig.mongodb.net/bugstack?retryWrites=true&w=majority'
-    );
+    const conn = await mongoose.connect(config.mongoURI.toString());
 
     console.log('MongoDB Connected');
   } catch (err) {
